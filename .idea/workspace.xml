@@ -2,10 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e7073a-9e45-4f92-93b5-a304b9ec7b60" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/namespace/NamespaceIdPartTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/namespace/NamespaceIdTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/namespace/NamespaceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/namespace/ReservedNamespaceFilterTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/AbstractMetaDataPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/AccountIdBuilderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/AccountIdTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/AccountInfoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/AccountMetaDataPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/AccountMetaDataTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/DefaultMetaDataTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/HarvestInfoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/MosaicDefinitionMetaDataPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/MosaicDefinitionSupplyPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/MosaicIdSupplyPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/MultisigInfoTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/NamespaceMetaDataPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/NemAnnounceResultTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/NemRequestResultTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/PublicKeyBuilderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/RequestAnnounceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/RequestPrepareAnnounceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/RequestPrepareTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/SerializableAccountIdTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/TransactionMetaDataPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/TransactionMetaDataTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/UnconfirmedTransactionMetaDataPairTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/org/nem/core/model/ncc/UnconfirmedTransactionMetaDataTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/Hash.java" afterPath="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/Hash.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/HashChain.java" afterPath="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/HashChain.java" />
@@ -112,8 +132,8 @@
       <file leaf-file-name="HashesTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/org/nem/core/crypto/HashesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="165">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -131,6 +151,7 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -156,6 +177,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/ed25519/arithmetic/Ed25519Field.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/ed25519/arithmetic/Ed25519FieldElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/monet/core/crypto/ed25519/arithmetic/Ed25519GroupElement.java" />
+        <option value="$PROJECT_DIR$/src/test/java/org/nem/core/crypto/HashesTest.java" />
       </list>
     </option>
   </component>
@@ -228,6 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -239,12 +263,6 @@
               <item name="MonetBlockchain" type="b2602c69:ProjectViewProjectNode" />
               <item name="MonetBlockchain" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MonetBlockchain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MonetBlockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MonetBlockchain" type="b2602c69:ProjectViewProjectNode" />
@@ -301,8 +319,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -310,7 +326,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -450,7 +466,9 @@
       <workItem from="1529459533073" duration="32000" />
       <workItem from="1529660492127" duration="45000" />
       <workItem from="1529897116782" duration="60000" />
-      <workItem from="1529990184095" duration="25000" />
+      <workItem from="1529990184095" duration="80000" />
+      <workItem from="1530084825999" duration="445000" />
+      <workItem from="1530085420350" duration="501000" />
     </task>
     <task id="LOCAL-00001" summary="init directory">
       <created>1526448736261</created>
@@ -613,14 +631,28 @@
       <option name="project" value="LOCAL" />
       <updated>1529897156739</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="test namespacepart">
+      <created>1529990264445</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1529990264445</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test namespacepart">
+      <created>1530085475005</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1530085475005</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10880000" />
+    <option name="totallyTimeSpent" value="11881000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="23" width="1398" height="877" extended-state="6" />
+    <frame x="44" y="23" width="1396" height="877" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -631,7 +663,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2173913" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30825958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31240767" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -658,7 +690,8 @@
     <MESSAGE value="handle response" />
     <MESSAGE value="handle ed25519" />
     <MESSAGE value="test mosaic" />
-    <option name="LAST_COMMIT_MESSAGE" value="test mosaic" />
+    <MESSAGE value="test namespacepart" />
+    <option name="LAST_COMMIT_MESSAGE" value="test namespacepart" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1026,8 +1059,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/org/nem/core/crypto/HashesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>

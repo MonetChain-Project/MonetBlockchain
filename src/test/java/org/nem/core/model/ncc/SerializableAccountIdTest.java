@@ -9,87 +9,87 @@ import org.monet.core.test.*;
 
 public class SerializableAccountIdTest {
 
-	@Test
-	public void canCreateIdAroundValidAddress() {
-		// Arrange:
-		final Address address = Utils.generateRandomAddress();
+    @Test
+    public void canCreateIdAroundValidAddress() {
+        // Arrange:
+        final Address address = Utils.generateRandomAddress();
 
-		// Act:
-		final SerializableAccountId accountId = new SerializableAccountId(address);
+        // Act:
+        final SerializableAccountId accountId = new SerializableAccountId(address);
 
-		// Assert:
-		Assert.assertThat(getAddress(accountId), IsEqual.equalTo(address));
-	}
+        // Assert:
+        Assert.assertThat(getAddress(accountId), IsEqual.equalTo(address));
+    }
 
-	@Test
-	public void cannotCreateIdAroundInvalidAddress() {
-		// Arrange:
-		final Address address = Address.fromEncoded("TBAD");
+    @Test
+    public void cannotCreateIdAroundInvalidAddress() {
+        // Arrange:
+        final Address address = Address.fromEncoded("TBAD");
 
-		// Assert:
-		ExceptionAssert.assertThrows(v -> new SerializableAccountId(address), IllegalArgumentException.class);
-	}
+        // Assert:
+        ExceptionAssert.assertThrows(v -> new SerializableAccountId(address), IllegalArgumentException.class);
+    }
 
-	@Test
-	public void canCreateIdAroundValidAddressString() {
-		// Arrange:
-		final Address address = Utils.generateRandomAddress();
+    @Test
+    public void canCreateIdAroundValidAddressString() {
+        // Arrange:
+        final Address address = Utils.generateRandomAddress();
 
-		// Act:
-		final SerializableAccountId accountId = new SerializableAccountId(address.toString());
+        // Act:
+        final SerializableAccountId accountId = new SerializableAccountId(address.toString());
 
-		// Assert:
-		Assert.assertThat(getAddress(accountId), IsEqual.equalTo(address));
-	}
+        // Assert:
+        Assert.assertThat(getAddress(accountId), IsEqual.equalTo(address));
+    }
 
-	@Test
-	public void cannotCreateIdAroundInvalidAddressString() {
-		// Assert:
-		ExceptionAssert.assertThrows(v -> new SerializableAccountId("TBAD"), IllegalArgumentException.class);
-	}
+    @Test
+    public void cannotCreateIdAroundInvalidAddressString() {
+        // Assert:
+        ExceptionAssert.assertThrows(v -> new SerializableAccountId("TBAD"), IllegalArgumentException.class);
+    }
 
-	@Test
-	public void canCreateIdAroundDeserializerWithValidAddress() {
-		// Arrange:
-		final Address address = Utils.generateRandomAddress();
+    @Test
+    public void canCreateIdAroundDeserializerWithValidAddress() {
+        // Arrange:
+        final Address address = Utils.generateRandomAddress();
 
-		// Act:
-		final SerializableAccountId accountId = createFromJson(address);
+        // Act:
+        final SerializableAccountId accountId = createFromJson(address);
 
-		// Assert:
-		Assert.assertThat(getAddress(accountId), IsEqual.equalTo(address));
-	}
+        // Assert:
+        Assert.assertThat(getAddress(accountId), IsEqual.equalTo(address));
+    }
 
-	@Test
-	public void cannotCreateIdAroundDeserializerWithInvalidAddress() {
-		// Act:
-		ExceptionAssert.assertThrows(v -> createFromJson(Address.fromEncoded("TBAD")), IllegalArgumentException.class);
-	}
+    @Test
+    public void cannotCreateIdAroundDeserializerWithInvalidAddress() {
+        // Act:
+        ExceptionAssert.assertThrows(v -> createFromJson(Address.fromEncoded("TBAD")), IllegalArgumentException.class);
+    }
 
-	@Test
-	public void canSerializeAccountId() {
-		// Arrange:
-		final Address address = Utils.generateRandomAddress();
-		final SerializableAccountId accountId = new SerializableAccountId(address);
+    @Test
+    public void canSerializeAccountId() {
+        // Arrange:
+        final Address address = Utils.generateRandomAddress();
+        final SerializableAccountId accountId = new SerializableAccountId(address);
 
-		// Act:
-		final JSONObject jsonObject = JsonSerializer.serializeToJson(accountId);
+        // Act:
+        final JSONObject jsonObject = JsonSerializer.serializeToJson(accountId);
 
-		// Assert:
-		Assert.assertThat(jsonObject.size(), IsEqual.equalTo(1));
-		Assert.assertThat(jsonObject.get("account"), IsEqual.equalTo(address.toString()));
-	}
+        // Assert:
+        Assert.assertThat(jsonObject.size(), IsEqual.equalTo(1));
+        Assert.assertThat(jsonObject.get("account"), IsEqual.equalTo(address.toString()));
+    }
 
-	private static SerializableAccountId createFromJson(final Address address) {
-		final JSONObject jsonObject = new JSONObject();
-		jsonObject.put("account", address.toString());
+    private static SerializableAccountId createFromJson(final Address address) {
+        final JSONObject jsonObject = new JSONObject();
+        jsonObject.put("account", address.toString());
 
-		// Act:
-		return new SerializableAccountId(Utils.createDeserializer(jsonObject));
-	}
+        // Act:
+        return new SerializableAccountId(Utils.createDeserializer(jsonObject));
+    }
 
-	private static Address getAddress(final SerializableAccountId accountId) {
-		final Deserializer deserializer = Utils.createDeserializer(JsonSerializer.serializeToJson(accountId));
-		return Address.readFrom(deserializer, "account");
-	}
+    private static Address getAddress(final SerializableAccountId accountId) {
+        final Deserializer deserializer = Utils.createDeserializer(JsonSerializer.serializeToJson(accountId));
+        return Address.readFrom(deserializer, "account");
+    }
 }

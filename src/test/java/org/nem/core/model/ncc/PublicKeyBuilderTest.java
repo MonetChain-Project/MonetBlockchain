@@ -7,17 +7,17 @@ import org.monet.core.test.Utils;
 
 public class PublicKeyBuilderTest {
 
-	@Test
-	public void publicKeyCanBeBuilt() {
-		// Arrange:
-		final PublicKey original = Utils.generateRandomPublicKey();
-		final PublicKeyBuilder builder = new PublicKeyBuilder();
+    @Test
+    public void publicKeyCanBeBuilt() {
+        // Arrange:
+        final PublicKey original = Utils.generateRandomPublicKey();
+        final PublicKeyBuilder builder = new PublicKeyBuilder();
 
-		// Act:
-		builder.setPublicKey(original.toString());
-		final PublicKey publicKey = builder.build();
+        // Act:
+        builder.setPublicKey(original.toString());
+        final PublicKey publicKey = builder.build();
 
-		// Assert:
-		Assert.assertThat(publicKey, IsEqual.equalTo(original));
-	}
+        // Assert:
+        Assert.assertThat(publicKey, IsEqual.equalTo(original));
+    }
 }

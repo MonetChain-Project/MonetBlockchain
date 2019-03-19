@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Verge Core
+Comment=Connect to the VERGE P2P Network
+Comment[de]=Verbinde mit dem VERGE peer-to-peer Netzwerk
+Comment[fr]=VERGE, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=VERGE, eşten eşe kriptografik sanal para birimi
+Exec=verge-qt %u
+Terminal=false
+Type=Application
+Icon=verge128
+MimeType=x-scheme-handler/verge;
+Categories=Office;Finance;P2P;Network;Qt;
+StartupWMClass=verge-qt
